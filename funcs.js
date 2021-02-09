@@ -38,7 +38,8 @@ function get_range(prompt){
         console.log(randnum); //uncomment to test
    // }
 
-
+// on load initialize new array
+let guessed = [];
 
     
 // collect user guess convert from string to number & validate
@@ -50,6 +51,9 @@ function validate_guess() {
     // assign message paragraph a usable variable    
     let message = document.getElementById("results-messages");
 
+    //track number of guesses
+    
+
     
     
     //validation and comparison screenings
@@ -60,23 +64,26 @@ function validate_guess() {
         alert("That number is not in range, try again.");
     }
     else if(guess == randnum){
-        message.innerHTML = "You got it!";
+
+        message.innerHTML = `"You got it! it took you "`;
+        guessed.push(guess);
     } 
     else if(guess > randnum) {
         message.innerHTML = "No, try a lower number.";
+        guessed.push(guess);
     }
     else if ( guess < randnum) {
         message.innerHTML ="No, try a higher number.";
+        guessed.push(guess);
     }
 
 }
-// on load initialize new array
-let guessed = [];
 
-// collect input and push to array
+
+// this code is to print to the console for testing only. 
 function build_array(){
-let guess = Number(document.getElementById("uguess").value);
-guessed.push(guess);
+//let guess = Number(document.getElementById("uguess").value);
+//guessed.push(guess);
 console.log(guessed)
 }
 
