@@ -30,13 +30,12 @@ function get_range(prompt){
     return range;
 }
 
-
 //On Load Generate Random Number 1-N
  //function generate_random() {
-  
-        let randnum = Math.floor(Math.random() * rangeNum) + 1;
-        console.log(randnum); //uncomment to test
+    let randnum = Math.floor(Math.random() * rangeNum) + 1;
+    console.log(randnum); //uncomment to test
    // }
+
 
 // on load initialize new array
 let guessed = [];
@@ -46,9 +45,8 @@ function build_array(){
     //let guess = Number(document.getElementById("uguess").value);
     //guessed.push(guess);
     console.log(guessed)
-    }
-    
-    
+    }  
+  
     
 // collect user guess convert from string to number & validate
 function validate_guess() {
@@ -59,11 +57,8 @@ function validate_guess() {
     let message = document.getElementById("results-messages");
 
     //track number of guesses & convert to delimited string
-    let numOfGuesses = guessed.length;
-    let arrayContents = guessed.toString();
 
-    
-    
+
     //validation and comparison screenings
     if(isNaN(guess)){
         alert("That's not a number! Use Numerical Values");
@@ -73,6 +68,8 @@ function validate_guess() {
     }
     else if(guess == randnum){
         guessed.push(guess);
+        let numOfGuesses = guessed.length;
+        let arrayContents = guessed.toString();
         message.innerHTML = `"You got it! it took you ${numOfGuesses} tries and your guesses were ${arrayContents}"`;
         
     } 
@@ -86,7 +83,5 @@ function validate_guess() {
     }
 
 }
-
-
 
 
