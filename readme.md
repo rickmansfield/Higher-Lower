@@ -21,7 +21,7 @@ Using an array, keep track of each guess by the user. When the user wins the gam
 
 "You got it! It took you 5 tries and your guesses were 3, 14, 7, 9, 5"
 
-Do not count invalid guesses (not numbers or out of range).
+Do not count invalid guesses (not numbers NaN or out of range).
 
 The application correctly initializes an array and uses the push() function to add the guesses.
 The application correctly formats the win message to include the comma-delimited guesses as part of the output.
