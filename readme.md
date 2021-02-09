@@ -23,7 +23,6 @@ Using an array, keep track of each guess by the user. When the user wins the gam
 
 Do not count invalid guesses (not numbers or out of range).
 
-Grading Criteria
 The application correctly initializes an array and uses the push() function to add the guesses.
 The application correctly formats the win message to include the comma-delimited guesses as part of the output.
 The application uses the length property and does not use an extra variable to count the number of guesses.
@@ -31,6 +30,5 @@ The application uses the length property and does not use an extra variable to c
 4. Prevent Duplicate Guesses
 Since you are tracking the guesses, add validation to check if a number has already been guessed. If it has, display a message and do not count it as a guess.
 
-Grading Criteria
 The application correctly checks the array for a guess first using any means (loop, find(), etc.).
 The application correctly displays the validation message.
