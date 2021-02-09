@@ -25,7 +25,6 @@ Do not count invalid guesses (not numbers or out of range).
 
 Grading Criteria
 The application correctly initializes an array and uses the push() function to add the guesses.
-The application stores the number of tries either in a variable or uses the length property.
 The application correctly formats the win message to include the comma-delimited guesses as part of the output.
 The application uses the length property and does not use an extra variable to count the number of guesses.
 
