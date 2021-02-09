@@ -66,16 +66,27 @@ function validate_guess() {
 console.log(guess);
 }
 
-//initialize the array
+//Track the Guesses using an array & display results absent invalid entries
+function build_array(){
 
-let guessed = [];
-//function pushData(){
-    //get values from user
+    //initialize the array
     let guess = Number(document.getElementById("uguess").value);
+    let guessed = [];
     
-    //append array
+    //use push() method to add to array
     guessed.push(guess);
-    console.log(guessed);
-//}
-
+    
+    for(let i=0; i<guessed.length; i++){
+        console.log(`Value: ${guessed[i]}`)
+    }
+    
+    //count number of guesses with length property
+    
+    //loop array for duplicates and errors
+    
+    //remove duplicates and errors
+    
+    //disply message
+    
+    }
 
