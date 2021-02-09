@@ -1,5 +1,6 @@
+//Get range & validate
 let rangeNum = get_range("Enter max play range 1-N as a number:");
-//rangeNum
+
 function get_range(prompt){
     let valid_input = false;
     let range, input;
@@ -37,19 +38,23 @@ function get_range(prompt){
         console.log(randnum); //uncomment to test
    // }
 
+
+
     
-    
-    // collect user guess convert from string to number & validate
+// collect user guess convert from string to number & validate
 function validate_guess() {
     let guess = Number(document.getElementById("uguess").value);
-   
-    // assign message paragraph a usable variable
-    
+   console.log(guess); //uncomment to test thus far
+
+
+    // assign message paragraph a usable variable    
     let message = document.getElementById("results-messages");
-    //console.log(guess); //uncomment to test
+
     
+    
+    //validation and comparison screenings
     if(isNaN(guess)){
-        alert("That's not a number!");
+        alert("That's not a number! Use Numerical Values");
     } 
     else if(guess > rangeNum || guess < 1) {
         alert("That number is not in range, try again.");
@@ -63,30 +68,17 @@ function validate_guess() {
     else if ( guess < randnum) {
         message.innerHTML ="No, try a higher number.";
     }
-console.log(guess);
+
+}
+// on load initialize new array
+let guessed = [];
+
+// collect input and push to array
+function build_array(){
+let guess = Number(document.getElementById("uguess").value);
+guessed.push(guess);
+console.log(guessed)
 }
 
-//Track the Guesses using an array & display results absent invalid entries
-function build_array(){
 
-    //initialize the array
-    let guess = Number(document.getElementById("uguess").value);
-    let guessed = [];
-    
-    //use push() method to add to array
-    guessed.push(guess);
-    
-    for(let i=0; i<guessed.length; i++){
-        console.log(`Value: ${guessed[i]}`)
-    }
-    
-    //count number of guesses with length property
-    
-    //loop array for duplicates and errors
-    
-    //remove duplicates and errors
-    
-    //disply message
-    
-    }
 
