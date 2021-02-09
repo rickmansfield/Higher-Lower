@@ -1,6 +1,3 @@
-Introduction
-For your final assessment, please make the following enhancements to the Higher-Lower game from the JavaScript exercises. You may start with the solution attached below or utilize your own solution to the practice exercise.
-
 1. Prompt for Max Number
 Instead of locking the game into a number between 1 and 20, use the prompt() method to ask the user what the maximum number should be. The prompt should be in a loop with validation as demonstrated previously in the course making sure that the inputted value is a positive number. If the user inputs a decimal, simply round it.
 
