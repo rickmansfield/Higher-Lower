@@ -56,13 +56,13 @@ function validate_guess() {
     // assign message paragraph a usable variable    
     let message = document.getElementById("results-messages");
 
-    //search for user input guess match to array of exsiting guesses
+    //look for guess match to array
     let match = guessed.indexOf(guess, 0);
         if (match === -1){
-            console.log ("no match")//for testing
+            console.log ("no match")
         }
         else {
-            console.log ("match found")// for testing
+            console.log ("match found")
             alert("oops you already guessed thant number. Try again.")
             guessed.splice(match,1);
         }
@@ -76,8 +76,7 @@ function validate_guess() {
     }
     else if(guess == randnum){
         guessed.push(guess);
-        let arrayContents = guessed.toString();
-        message.innerHTML = `"You got it! it took you ${guessed.length} tries and your guesses were ${arrayContents}"`;     
+        message.innerHTML = `"You got it! it took you ${guessed.length} tries and your guesses were ${guessed.toString()}"`;     
     } 
     else if(guess > randnum) {
         message.innerHTML = "No, try a lower number.";

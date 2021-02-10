@@ -11,3 +11,9 @@
 
 //compare validated guess to random number
 //let guessVsRandom = compare();
+
+//Track the Guesses using an array & display results absent invalid entries
+/*
+let buildArray = function build_array(){
+}
+ */
