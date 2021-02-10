@@ -56,13 +56,13 @@ function validate_guess() {
     // assign message paragraph a usable variable    
     let message = document.getElementById("results-messages");
 
-    //look for guess match to array
+    //search for user input guess match to array of exsiting guesses
     let match = guessed.indexOf(guess, 0);
         if (match === -1){
-            console.log ("no match")
+            console.log ("no match")//for testing
         }
         else {
-            console.log ("match found")
+            console.log ("match found")// for testing
             alert("oops you already guessed thant number. Try again.")
             guessed.splice(match,1);
         }
