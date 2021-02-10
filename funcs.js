@@ -76,9 +76,8 @@ function validate_guess() {
     }
     else if(guess == randnum){
         guessed.push(guess);
-        let numOfGuesses = guessed.length;
         let arrayContents = guessed.toString();
-        message.innerHTML = `"You got it! it took you ${numOfGuesses} tries and your guesses were ${arrayContents}"`;     
+        message.innerHTML = `"You got it! it took you ${guessed.length} tries and your guesses were ${arrayContents}"`;     
     } 
     else if(guess > randnum) {
         message.innerHTML = "No, try a lower number.";
