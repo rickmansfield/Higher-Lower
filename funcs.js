@@ -64,14 +64,12 @@ function validate_guess() {
         else {
             console.log ("match found")
             alert("oops you already guessed thant number. Try again.")
+            guessed.splice(match,1);
         }
   
     //validation and comparison screenings
     if(isNaN(guess)){
         alert("That's not a number! Use Numerical Values");
-    }
-    else if (guess === "priorGuess") {
-        alert("oops you already guessed thant number. Try again.")
     }
     else if(guess > rangeNum || guess < 1) {
         alert("That number is not in range, try again.");
@@ -80,8 +78,7 @@ function validate_guess() {
         guessed.push(guess);
         let numOfGuesses = guessed.length;
         let arrayContents = guessed.toString();
-        message.innerHTML = `"You got it! it took you ${numOfGuesses} tries and your guesses were ${arrayContents}"`;
-        
+        message.innerHTML = `"You got it! it took you ${numOfGuesses} tries and your guesses were ${arrayContents}"`;     
     } 
     else if(guess > randnum) {
         message.innerHTML = "No, try a lower number.";
