@@ -56,16 +56,15 @@ function validate_guess() {
     // assign message paragraph a usable variable    
     let message = document.getElementById("results-messages");
 
-//look for guess match to array
-let match = guessed.indexOf(guess, 0);
-    if (match === -1){
-        console.log ("no match")
-    }
-    else {
-        console.log ("match found")
-        alert("oops you already guessed thant number. Try again.")
-    }
-
+    //look for guess match to array
+    let match = guessed.indexOf(guess, 0);
+        if (match === -1){
+            console.log ("no match")
+        }
+        else {
+            console.log ("match found")
+            alert("oops you already guessed thant number. Try again.")
+        }
   
     //validation and comparison screenings
     if(isNaN(guess)){
