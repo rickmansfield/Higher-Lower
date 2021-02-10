@@ -1,3 +1,7 @@
+BE SURE your add blocker is turned OFF. Some browsers will not function properly if add blocker is on because this app uses a pop up prompt
+
+Here are the highlights of the featrues demonstrated with this application. 
+
 1. Prompt for Max Number
 Instead of locking the game into a number between 1 and 20, use the prompt() method to ask the user what the maximum number should be. The prompt should be in a loop with validation as demonstrated previously in the course making sure that the inputted value is a positive number. If the user inputs a decimal, simply round it.
 
