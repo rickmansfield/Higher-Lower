@@ -56,13 +56,24 @@ function validate_guess() {
     // assign message paragraph a usable variable    
     let message = document.getElementById("results-messages");
 
-    //track number of guesses & convert to delimited string
+//look for guess match to array
+let match = guessed.indexOf(guess, 0);
+    if (match === -1){
+        console.log ("no match")
+    }
+    else {
+        console.log ("match found")
+        alert("oops you already guessed thant number. Try again.")
+    }
 
-
+  
     //validation and comparison screenings
     if(isNaN(guess)){
         alert("That's not a number! Use Numerical Values");
-    } 
+    }
+    else if (guess === "priorGuess") {
+        alert("oops you already guessed thant number. Try again.")
+    }
     else if(guess > rangeNum || guess < 1) {
         alert("That number is not in range, try again.");
     }
